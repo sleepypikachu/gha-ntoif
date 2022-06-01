@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  succeed: # don't fail on main branch
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Succeed
+      run: exit 0
+    - name: Print message
+      run: echo Success!
+
+   
